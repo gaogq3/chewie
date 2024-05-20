@@ -72,7 +72,7 @@ class ChewieState extends State<Chewie> {
     if (isControllerFullScreen && !_isFullScreen) {
       _isFullScreen = isControllerFullScreen;
       await _pushFullScreenWidget(context);
-    } else if (_isFullScreen) {
+    } else if (!isControllerFullScreen && _isFullScreen) {
       Navigator.of(
         context,
         rootNavigator: widget.controller.useRootNavigator,
