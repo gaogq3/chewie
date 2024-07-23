@@ -186,18 +186,18 @@ class ChewieState extends State<Chewie> {
     final videoHeight =
         widget.controller.videoPlayerController.value.size.height;
 
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
-    // if (widget.controller.systemOverlaysOnEnterFullScreen != null) {
-    //   /// Optional user preferred settings
-    //   SystemChrome.setEnabledSystemUIMode(
-    //     SystemUiMode.manual,
-    //     overlays: widget.controller.systemOverlaysOnEnterFullScreen,
-    //   );
-    // } else {
-    //   /// Default behavior
-    //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
-    // }
+    if (widget.controller.systemOverlaysOnEnterFullScreen != null) {
+      /// Optional user preferred settings
+      SystemChrome.setEnabledSystemUIMode(
+        SystemUiMode.manual,
+        overlays: widget.controller.systemOverlaysOnEnterFullScreen,
+      );
+    } else {
+      /// Default behavior
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    }
 
     if (widget.controller.deviceOrientationsOnEnterFullScreen != null) {
       /// Optional user preferred settings
