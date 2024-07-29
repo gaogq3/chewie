@@ -16,8 +16,8 @@ dependencies:
     git:
       url: https://github.com/gaogq3/packages.git
       path: packages/video_player/video_player
-      ref: v1.0.1
-  wakelock_plus: ^1.1.0
+      ref: 9ee4e6a6975a77240e03ecd1a9671a0a3b248440
+  wakelock_plus: 1.1.0
 
 dev_dependencies:
   flutter_test:
