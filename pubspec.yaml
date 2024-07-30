@@ -16,7 +16,7 @@ dependencies:
     git:
       url: https://github.com/gaogq3/packages.git
       path: packages/video_player/video_player
-      ref: 9ee4e6a6975a77240e03ecd1a9671a0a3b248440
+      ref: da7837e656ba48046c242cbc1db6955682d8e025
   wakelock_plus: 1.1.0
 
 dev_dependencies:
